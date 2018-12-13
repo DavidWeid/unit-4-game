@@ -4,29 +4,112 @@
 <head>
     <meta charset="utf-8" />
     <title>Chaos Emerald Game</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
+        crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Notable" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
 </head>
 
 <body>
 
-    <h1>Choas Emerald Game</h1>
+    <div class="container-fluid py-5 px-5">
 
-    <button id="instructions-btn"> Instructions </button>
+        <div class="row pb-3 mx-auto">
 
-    <p>Target number: <span id="target-number"></span> </p>
+            <h1 class="bungee-shade mx-auto text-center largest-text">Save the Chaos Emeralds!</h1>
 
-    <p>Wins: <span id="wins"></span> </p>
+        </div>
 
-    <p>Losses: <span id="losses"></span> </p>
+        <div id="instructionsModal">
 
-    <div id="emeralds"></div>
+            <div class="row pb-5 mb-3">
 
-    <p>Total Score: <span id="current-score"></span> </p>
+                <button type="button" class="btn btn-lg btn-dark border-danger rounded-0 mx-auto" id="instructionsModal-btn"
+                    data-toggle="modal" data-target="#instructionsModalCenter">
 
+                    Instructions
+
+                </button>
+
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="instructionsModalCenter" tabindex="-1" role="dialog" aria-labelledby="instructionsModalCenterTitle"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title text-center black-text" id="instructionsModalCenterTitle">
+                                Get the target number and save the Chaos Emeralds!
+                            </h5>
+                        </div>
+                        <div class="modal-body text-center black-text">
+                            <ul>
+                                <li class="dark-text">At the start of each round look at the Target Number.</li>
+                                <li class="red-text">You have 4 emeralds to choose from.</li>
+                                <li class="dark-text">Click emeralds to increase your score.</li>
+                                <li class="red-text">Match the target score and save the day!</li>
+                            </ul>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-dark border-danger rounded-0 mx-auto" data-dismiss="modal">Let's
+                                Go!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--Close instructionsModal-->
+
+        <div class="row pt-2 pb-5 mb-5 mx-auto">
+            
+            <div class="col-12 mx-auto">
+                <div class="mx-auto text-center" id="emeralds"></div>
+            </div>
+
+        </div>
+
+        <div class="row mb-5 pb-5">
+
+            <div class="col-md-2"></div>
+
+            <div class="col-md-4 col-sm-12">
+
+                <div class="card red-text mx-auto" style="width: 18rem;">
+                    <div class="card-header text-center">
+                        Target number: <span id="target-number"></span>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Wins: <span id="wins"></span></li>
+                        <li class="list-group-item">Losses: <span id="losses"></span></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+
+                <div class="card red-text mx-auto" style="width: 18rem; height: 100%;">
+                    <div class="card-header text-center">
+                        Total Score
+                    </div>
+                    <div class="card-body text-center large-text">
+                        <span id="current-score"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-2"></div>
+
+        </div>
+        <!--Close Game Status-->
+
+    </div>
+    <!--Close Container-->
 
 
 

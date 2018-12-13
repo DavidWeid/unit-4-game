@@ -1,5 +1,47 @@
+html,
+body {
+    font-family: 'Bungee', 'Bungee Shade', 'Notable', cursive, sans-serif;
+    color: white;
+    font-size: 18px;
+    height: 100%;
+}
+
+body {
+    background-image: url("../images/sonic-thumbs-up.jpg");
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.bungee-shade {
+    font-family: 'Bungee Shade';
+}
+
+.black-text {
+    color: black;
+}
+
+.red-text {
+    color: crimson;
+}
+
+.dark-text {
+    color: darkslategray;
+}
+
+.largest-text {
+    font-size: 58px;
+}
+
+.large-text {
+    font-size: 36px;
+}
+
 .emerald-img {
-    width: 250px;
+    width: 275px;
     height: auto;
     padding: 20px;
+    margin: 0 24px;
 }

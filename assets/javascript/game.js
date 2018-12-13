@@ -24,7 +24,7 @@ emeraldImg.addClass("emerald-img");
 emeraldImg.attr("data-emeraldValue", randoms[0]);
 $("#emeralds").append(emeraldImg);
 
-var emeraldImg2 = $("<img src='assets/images/green-emerald.png' />");
+var emeraldImg2 = $("<img src='assets/images/white-emerald.png' />");
 emeraldImg2.addClass("emerald-img");
 emeraldImg2.attr("data-emeraldValue", randoms[1]);
 $("#emeralds").append(emeraldImg2);
@@ -34,7 +34,7 @@ emeraldImg3.addClass("emerald-img");
 emeraldImg3.attr("data-emeraldValue", randoms[2]);
 $("#emeralds").append(emeraldImg3);
 
-var emeraldImg4 = $("<img src='assets/images/white-emerald.png' />");
+var emeraldImg4 = $("<img src='assets/images/yellow-emerald.png' />");
 emeraldImg4.addClass("emerald-img");
 emeraldImg4.attr("data-emeraldValue", randoms[3]);
 $("#emeralds").append(emeraldImg4);
@@ -83,6 +83,24 @@ function updateWinLoss() {
 
 }
 
+function standardBackground() {
+
+    $("body").css("background-image", "url(assets/images/sonic-thumbs-up.jpg");
+
+}
+
+function winBackground() {
+
+    $("body").css("background-image", "url(assets/images/golden-sonic.jpg");
+
+}
+
+function lossBackground() {
+
+    $("body").css("background-image", "url(assets/images/game-over.png");
+    $("#emeralds").css("opacity", 0.4);
+
+}
 
 /// The Clicking Part of the Game ///
 
@@ -97,15 +115,19 @@ $(".emerald-img").on("click", function () {
 
     $("#current-score").html(currentScore);
 
+    standardBackground();
+
     if (currentScore === targetNumber) {
 
         wins++;
         resetGame();
+        winBackground();
 
     } else if (currentScore >= targetNumber) {
 
         losses++;
         resetGame();
+        lossBackground();
 
     }
 
