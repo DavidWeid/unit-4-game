@@ -86,6 +86,7 @@ function updateWinLoss() {
 function standardBackground() {
 
     $("body").css("background-image", "url(assets/images/sonic-thumbs-up.jpg");
+    $("#emeralds").css("opacity", 1);
 
 }
 
